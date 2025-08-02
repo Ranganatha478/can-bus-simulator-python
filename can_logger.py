@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 # Initialize CAN bus (virtual interface for simulation)
-bus = can.interface.Bus(bustype='virtual', channel='vcan0', bitrate=500000)
+bus = can.interface.Bus(bustype='virtual', channel='vcan0', bitrate=500000, receive_own_messages=True)
 
 # Function to send CAN messages
 def send_can_messages():
